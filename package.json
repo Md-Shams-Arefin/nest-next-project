@@ -1,0 +1,19 @@
+{
+  "name": "nest-next-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Arefin-SemicolonIt/nest-next-project.git",
+  "author": "Md. Shamsul Arefin",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^7.6.0"
+  },
+  "scripts": {
+    "install:app": "yarn install && yarn install:server && yarn install:client",
+    "install:client": "yarn --cwd ./client install",
+    "install:server": "yarn --cwd ./server install",
+    "server": "yarn --cwd ./server start:dev",
+    "client": "yarn --cwd ./client dev",
+    "dev": "concurrently \"yarn server\" \"yarn client\""
+  }
+}
